@@ -1,0 +1,2 @@
+# Framework sys/pll_q17.qip includes this core-specific PLL dependency.
+set_global_assignment -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) fl_pll.sv]
