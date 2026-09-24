@@ -1,0 +1,55 @@
+set_global_assignment -name SYSTEMVERILOG_FILE SYSTEMFL.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/cpu/i960ka.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_bus.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_download.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_shared_ram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_inputs.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_video_timing.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mem/fl_sdram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mem/fl_mem_arb.sv
+set_global_assignment -name SDC_FILE SYSTEMFL.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_c116.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_irq.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_board.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_mcu_bus.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_bios_loader.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mem/fl_client_arb.sv
+set_global_assignment -name VHDL_FILE rtl/mcu/fl_bios_ram.vhd
+set_global_assignment -name VHDL_FILE rtl/mcu/fl_mcu_ram.vhd
+set_global_assignment -name VHDL_FILE rtl/mcu/m37702.vhd
+set_global_assignment -name VHDL_FILE rtl/mcu/fl_mcu_timer.vhd
+set_global_assignment -name VHDL_FILE rtl/mcu/fl_c75.vhd
+set_global_assignment -name VHDL_FILE rtl/audio/c352.vhd
+set_global_assignment -name VHDL_INPUT_VERSION VHDL_2008
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_c123.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_tile_video.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mem/fl_dual_read_ram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_c169_affine.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_c169.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_road_video.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_layer_fb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_ddr_mux.sv
+# PATREON pause screen: the fleet pause_overlay (SYSTEM12 renderer) with MLAB ROMs generated from
+# pause_src/pause.txt by tools/gen_pause_assets.py (rtl/pause_assets, sha256-tracked).
+set_global_assignment -name VERILOG_FILE rtl/video/pause_overlay.v
+set_global_assignment -name MIF_FILE rtl/pause_assets/patreon_text.mif
+set_global_assignment -name MIF_FILE rtl/pause_assets/patreon_color.mif
+set_global_assignment -name MIF_FILE rtl/pause_assets/font_8x16.mif
+set_global_assignment -name SEARCH_PATH rtl/pause_assets
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/mem/fl_video_ram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_c355_ram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_c355_axis.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_c355_list.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_c355_draw.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_c355_pixels.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_sprite_video.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_video_mix.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/fl_nvram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/audio/fl_audio_clock.sv
+# PATREON: DB9/DB15 pad support on USER_IO -- the joydb files are framework
+# (MiSTer-DB9 fork) and are listed in sys/sys.qip, not here.
+# PATREON: CRT Adjust (rmonic79, GPLv3). crt_adjust.sv / crt_adjust_mlab.sv are verbatim copies of
+# the SUPER22 core's modules; fl_crtadj.sv is the System FL glue at the emu video boundary.
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/crt_adjust.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/crt_adjust_mlab.sv
+set_global_assignment -name SYSTEMVERILOG_FILE rtl/video/fl_crtadj.sv
